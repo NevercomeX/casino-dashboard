@@ -1,18 +1,17 @@
-import type { Config } from "tailwindcss";
-
-export default {
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
-  ],
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: ["./app/**/*.{js,ts,jsx,tsx}", "./components/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#1A1E33",
+        secondary: "#303653",
+        accent: "#00ADB5",
+        highlight: "#FFBC42",
+        textLight: "#EEEEEE",
+        sidemenu: "#0c1029"
       },
     },
   },
-  plugins: [],
-} satisfies Config;
+  plugins: ["tailwind-scrollbar-hide"],
+};
