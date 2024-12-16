@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌌 Space UI Components 🌌
 
-## Getting Started
+### 🚀 Futuristic React Components with Next.js, Three.js & Framer Motion
 
-First, run the development server:
+Welcome to **Space UI Components**, a collection of modern and interactive React components designed for futuristic, gaming, or sci-fi themed projects. These components include dynamic animations, 3D backgrounds with **Three.js**, and stunning visual effects using **Framer Motion**.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## **✨ Features**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **3D Space Background Button**  
+   - A button with a dynamic starry sky background animated using **Three.js**.  
+   - Includes hover effects with **Framer Motion**.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Casino Hub UI**  
+   - A fullscreen banner with a welcome message and a *Random Slot Game* button.  
+   - Includes a horizontal player list overlapping the banner.
 
-## Learn More
+3. **Leaderboard Component**  
+   - Displays the top players, usernames, avatars, bet amount, multipliers, and payouts.
 
-To learn more about Next.js, take a look at the following resources:
+4. **Recent Bets Component**  
+   - A dedicated component showing recent bets with full details, including:
+     - Username, game type, coins bet, multipliers, and payouts.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. **Game Grid with Categories and Search**  
+   - A responsive grid layout displaying all games.  
+   - Includes a category filter, search bar, and adjustable row count.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+6. **Reusable Player List**  
+   - Displays players' icons, usernames, and coins bet.
 
-## Deploy on Vercel
+7. **Custom Footer**  
+   - A footer with:
+     - Site logo and description.
+     - Organized platform links, support/legal sections.
+     - Cryptocurrency icons displayed horizontally.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## **🛠️ Technologies Used**
+
+- **Next.js** (React Framework)  
+- **TypeScript**  
+- **Three.js** & **@react-three/fiber**  
+- **@react-three/drei** (Helper library for Three.js)  
+- **Framer Motion** (For smooth animations)  
+- **Tailwind CSS** (For clean and modern styling)
+
+---
+
+## **📸 Preview**
+
+### **Casino Hub UI**
+
+![Casino Hub](https://your-image-link-here.com/casino-hub-preview.png)
+
+### **Starry Background Button**
+
+![Space Button](https://your-image-link-here.com/starry-button-preview.png)
+
+---
+
+## **🚀 Installation**
+
+1. **Clone the repository**
+
+   ```bash
+   git clone https://github.com/yourusername/space-ui-components.git
+   cd space-ui-components
