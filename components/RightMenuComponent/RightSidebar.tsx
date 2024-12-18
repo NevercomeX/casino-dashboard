@@ -2,16 +2,9 @@
 import { useState } from "react";
 import Image from "next/image";
 import { FaUserFriends, FaEnvelope, FaComments } from "react-icons/fa";
-import FriendsList from "@/components/FriendsList";
-import MessagesComponent from "@/components/MessagesComponent";
-import AnimatedButton from "@/components/AnimatedButton";
-// import ChatComponent from "@/components/ChatComponent";
-// import { div } from "framer-motion/client";
-
-// Componentes para cada sección
-function Chat() {
-  return <div className="p-4 text-center">Chat Component</div>;
-}
+import FriendsList from "@/components/RightMenuComponent/FriendsList";
+import MessagesComponent from "@/components/RightMenuComponent/MessagesComponent";
+import GlobalChat from "@/components/RightMenuComponent/GlobalChat";
 
 export default function RightSidebar() {
   const [activeTab, setActiveTab] = useState("Chat");
@@ -20,22 +13,18 @@ export default function RightSidebar() {
     switch (activeTab) {
       case "Chat":
         // return <ChatComponent />;
-        return (
-          <div className="flex justify-center">
-            <span>nothing here yet</span>
-          </div>
-        );
+        return <GlobalChat />;
       case "Messages":
         return <MessagesComponent />;
       case "Friends":
         return <FriendsList />;
       default:
-        return <Chat />;
+        return <GlobalChat />;
     }
   };
 
   return (
-    <aside className="bg-sidemenu h-screen w-72 flex flex-col text-textLight ">
+    <aside className=" h-screen w-72 flex flex-col text-textLight ">
       {/* Imagen superior */}
       <div className="p-6 flex justify-center">
         <Image
@@ -48,7 +37,6 @@ export default function RightSidebar() {
       </div>
 
       {/* Botón grande */}
-      <AnimatedButton />
       <div className="px-6 pb-4">
         <button className="w-full flex items-center justify-center space-x-3 p-4 bg-highlight text-white font-bold rounded-lg hover:bg-secondary transition">
           <FaUserFriends />
@@ -94,9 +82,7 @@ export default function RightSidebar() {
       </nav>
 
       {/* Contenido dinámico */}
-      <div className="flex-1 overflow-y-auto bg-secondary">
-        {renderContent()}
-      </div>
+      <div className="flex-1 overflow-y-auto">{renderContent()}</div>
     </aside>
   );
 }

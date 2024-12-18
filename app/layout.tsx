@@ -3,9 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
 import Topbar from "@/components/Topbar";
-import RightSidebar from "@/components/RightSidebar";
-import LeftSidebar from "@/components/LeftSidebar";
-import Footer from "@/components/Footer";
+import RightSidebar from "@/components/RightMenuComponent/RightSidebar";
+import LeftSidebar from "@/components/LeftMenuComponent/LeftSidebar";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,23 +31,22 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#060b1f] text-white`}
       >
-        <div className="flex min-h-screen overflow-hidden">
-          {/* Left Sidebar */}
-          <LeftSidebar />
-
-          {/* Main Content Area */}
-          <div className="flex flex-1 flex-col bg-[#060b1f]">
-            {/* Topbar */}
-
-            {/* Scrollable Content */}
-            <main className="flex-1 overflow-auto p-6 rounded-md m-4 shadow-lg">
-              <Topbar />
-              {children}
-            </main>
+        <div className="flex min-h-screen">
+          {/* Left Sidebar - Fijo */}
+          <div className="sticky top-0 h-screen w-64">
+            <LeftSidebar />
           </div>
 
-          {/* Right Sidebar */}
-          <RightSidebar />
+          {/* Main Content Area - Scrollable */}
+          <div className="flex-1 overflow-auto bg-[#060b1f]">
+            <Topbar />
+            <main className="p-6">{children}</main>
+          </div>
+
+          {/* Right Sidebar - Fijo */}
+          <div className="sticky top-0 h-screen w-72">
+            <RightSidebar />
+          </div>
         </div>
       </body>
     </html>

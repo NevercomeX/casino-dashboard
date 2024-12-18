@@ -3,18 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3123",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@svgr/webpack": "^8.1.0",
     "framer-motion": "^11.14.4",
     "next": "15.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-icons": "^5.4.0",
-    "three": "^0.171.0"
+    "three": "^0.171.0",
+    "uuid": "^11.0.3"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

@@ -1,7 +1,7 @@
 import Achievements from "@/components/Achievements";
 import Footer from "@/components/Footer";
-import FriendsList from "@/components/FriendsList";
-import GameBrowser from "@/components/GameBrowser";
+import FriendsList from "@/components/RightMenuComponent/FriendsList";
+import GameBrowser from "@/components/GameBrowserComponent/GameBrowser";
 import GameGrid from "@/components/GameGrid";
 import GameWithPlayers from "@/components/GameWithPlayers";
 // import Leaderboard from "@/components/Leaderboard";

@@ -1,3 +1,26 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Estilizar barras de scroll en toda la aplicación */
+
+/* Scrollbar para navegadores basados en Webkit (Chrome, Edge, Safari) */
+body {
+  scrollbar-width: thin; /* Firefox: Hacer la barra delgada */
+  scrollbar-color: var(--color-highlight) var(--color-secondary); /* Colores en Firefox */
+  overflow-x: hidden; /* Eliminar barra de scroll horizontal */
+}
+
+body::-webkit-scrollbar {
+  width: 8px; /* Ancho de la barra vertical */
+  height: 0; /* Ocultar la barra horizontal */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-highlight); /* Color del thumb */
+  border-radius: 4px; /* Bordes redondeados */
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--color-secondary); /* Fondo del track */
+}

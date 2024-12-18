@@ -2,113 +2,17 @@
 
 import { useState } from "react";
 import { FaDice, FaGamepad, FaCar, FaRocket } from "react-icons/fa";
-
-// Datos de juegos
-const games = [
-  {
-    id: 1,
-    name: "Roulette",
-    category: "Casino",
-    popularity: 95,
-    plays: 1200,
-    image: "/Games/1.gif",
-  },
-  {
-    id: 2,
-    name: "Crash",
-    category: "Casino",
-    popularity: 85,
-    plays: 1100,
-    image: "/crash.jpg",
-  },
-  {
-    id: 3,
-    name: "Towers",
-    category: "Arcade",
-    popularity: 78,
-    plays: 980,
-    image: "/towers.jpg",
-  },
-  {
-    id: 4,
-    name: "Mines",
-    category: "Casino",
-    popularity: 88,
-    plays: 1050,
-    image: "/mines.jpg",
-  },
-  {
-    id: 5,
-    name: "Slots",
-    category: "Casino",
-    popularity: 92,
-    plays: 1500,
-    image: "/slots.jpg",
-  },
-  {
-    id: 6,
-    name: "Poker",
-    category: "Card",
-    popularity: 90,
-    plays: 1400,
-    image: "/poker.jpg",
-  },
-  {
-    id: 7,
-    name: "Blackjack",
-    category: "Card",
-    popularity: 87,
-    plays: 1000,
-    image: "/blackjack.jpg",
-  },
-  {
-    id: 8,
-    name: "Crash Royale",
-    category: "Arcade",
-    popularity: 80,
-    plays: 900,
-    image: "/crash-royale.jpg",
-  },
-  {
-    id: 9,
-    name: "Baccarat",
-    category: "Casino",
-    popularity: 84,
-    plays: 950,
-    image: "/baccarat.jpg",
-  },
-  {
-    id: 10,
-    name: "Roulette Pro",
-    category: "Casino",
-    popularity: 96,
-    plays: 1300,
-    image: "/roulette-pro.jpg",
-  },
-  {
-    id: 11,
-    name: "Super Mines",
-    category: "Arcade",
-    popularity: 89,
-    plays: 1020,
-    image: "/super-mines.jpg",
-  },
-  {
-    id: 12,
-    name: "Mega Slots",
-    category: "Casino",
-    popularity: 94,
-    plays: 1600,
-    image: "/mega-slots.jpg",
-  },
-];
+import { games } from "./data";
 
 // Categorías con íconos y nombres
 const categories = [
   { name: "All", icon: <FaGamepad />, value: "All" },
-  { name: "Casino", icon: <FaDice />, value: "Casino" },
-  { name: "Arcade", icon: <FaRocket />, value: "Arcade" },
-  { name: "Card", icon: <FaCar />, value: "Card" },
+  { name: "New", icon: <FaDice />, value: "New" },
+  { name: "Hot", icon: <FaRocket />, value: "Hot" },
+  { name: "Megaways", icon: <FaCar />, value: "Megaways" },
+  { name: "JackPot", icon: <FaCar />, value: "JackPot" },
+  { name: "Buy Bonus", icon: <FaCar />, value: "BuyBonus" },
+  { name: "Recent Games", icon: <FaCar />, value: "RecentGames" },
 ];
 
 const filters = ["Popular", "Most Played"];
