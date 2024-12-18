@@ -52,3 +52,4 @@ local
 # storybook
 storybook-static
 .vscode
+pnpm-lock.yaml

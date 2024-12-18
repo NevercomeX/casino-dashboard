@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import { FaUserFriends, FaEnvelope, FaComments } from "react-icons/fa";
+import { FaUserFriends, FaComments } from "react-icons/fa";
 import FriendsList from "@/components/RightMenuComponent/FriendsList";
 import MessagesComponent from "@/components/RightMenuComponent/MessagesComponent";
 import GlobalChat from "@/components/RightMenuComponent/GlobalChat";
