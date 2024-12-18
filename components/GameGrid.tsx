@@ -11,7 +11,7 @@ const games = [
   },
   {
     title: "Crash",
-    image: "/Games/crash.jpg",
+    image: "/Games/Crash.jpg",
     description: "Multiply your winnings!",
   },
   {
