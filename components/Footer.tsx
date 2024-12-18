@@ -5,7 +5,6 @@ import TronIcon from "@/public/icons/tron.svg";
 import DogeIcon from "@/public/icons/dogecoin.svg";
 import SolanaIcon from "@/public/icons/solana.svg";
 import TetherIcon from "@/public/icons/tether.svg";
-import Image from "next/Image";
 
 import UsdcIcon from "@/public/icons/usdc.svg";
 
@@ -29,7 +28,7 @@ export default function Footer() {
           {/* Columna 1: Logo y Descripción */}
           <div className="space-y-2 pr-24 pl-12">
             <div className="flex justify-left items-start">
-              <Image
+              <img
                 src="/logo.svg"
                 alt="Profile Image"
                 width={150}
