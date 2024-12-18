@@ -31,22 +31,39 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#060b1f] text-white`}
       >
+        {/* Contenedor Principal */}
         <div className="flex min-h-screen">
-          {/* Left Sidebar - Fijo */}
-          <div className="sticky top-0 h-screen w-64">
+          {/* Left Sidebar - Oculto en Mobile */}
+          <div className="hidden lg:block sticky top-0 h-screen w-64">
             <LeftSidebar />
           </div>
 
-          {/* Main Content Area - Scrollable */}
+          {/* Main Content Area */}
           <div className="flex-1 overflow-auto bg-[#060b1f]">
             <Topbar />
-            <main className="p-6">{children}</main>
+            <main className="p-4 sm:p-6">{children}</main>
           </div>
 
-          {/* Right Sidebar - Fijo */}
-          <div className="sticky top-0 h-screen w-72">
+          {/* Right Sidebar - Oculto en Mobile */}
+          <div className="hidden lg:block sticky top-0 h-screen w-72">
             <RightSidebar />
           </div>
+        </div>
+
+        {/* Menú Lateral en Móvil */}
+        <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-[#0d1026] flex justify-around p-2 shadow-md">
+          <button className="text-white flex items-center flex-col">
+            <span>🏠</span>
+            <span className="text-xs">Home</span>
+          </button>
+          <button className="text-white flex items-center flex-col">
+            <span>🎲</span>
+            <span className="text-xs">Games</span>
+          </button>
+          <button className="text-white flex items-center flex-col">
+            <span>👤</span>
+            <span className="text-xs">Profile</span>
+          </button>
         </div>
       </body>
     </html>

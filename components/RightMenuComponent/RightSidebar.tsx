@@ -7,24 +7,23 @@ import MessagesComponent from "@/components/RightMenuComponent/MessagesComponent
 import GlobalChat from "@/components/RightMenuComponent/GlobalChat";
 
 export default function RightSidebar() {
-  const [activeTab, setActiveTab] = useState("Chat");
+  const [activeTab, setActiveTab] = useState("Messages");
 
   const renderContent = () => {
     switch (activeTab) {
       case "Chat":
-        // return <ChatComponent />;
         return <GlobalChat />;
       case "Messages":
         return <MessagesComponent />;
       case "Friends":
         return <FriendsList />;
       default:
-        return <GlobalChat />;
+        return <MessagesComponent />;
     }
   };
 
   return (
-    <aside className=" h-screen w-72 flex flex-col text-textLight ">
+    <aside className=" h-screen flex flex-col text-textLight ">
       {/* Imagen superior */}
       <div className="p-6 flex justify-center">
         <Image
@@ -45,10 +44,10 @@ export default function RightSidebar() {
       </div>
 
       {/* Menú Horizontal */}
-      <nav className="flex justify-around border-b border-gray-700">
+      <nav className="flex justify-center items-center border-b border-gray-700">
         <button
           onClick={() => setActiveTab("Chat")}
-          className={`flex-1 text-center py-2 ${
+          className={`pl- flex-1 flex gap-2 flex-row text-center py-2 ${
             activeTab === "Chat"
               ? "text-highlight border-b-2 border-highlight"
               : "text-textLight"
@@ -65,8 +64,7 @@ export default function RightSidebar() {
               : "text-textLight"
           }`}
         >
-          <FaEnvelope className="inline-block mb-1 text-lg" />
-          <div>Messages</div>
+          <div>Messages (3)</div>
         </button>
         <button
           onClick={() => setActiveTab("Friends")}
@@ -76,7 +74,6 @@ export default function RightSidebar() {
               : "text-textLight"
           }`}
         >
-          <FaUserFriends className="inline-block mb-1 text-lg" />
           <div>Friends</div>
         </button>
       </nav>

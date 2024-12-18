@@ -9,7 +9,7 @@ import RecentBets from "@/components/RecentBets";
 
 export default function Home() {
   return (
-    <div className="space-y-6 gap-6">
+    <div className="space-y-6 w-full gap-6">
       {/* Game Grid */}
       <GameWithPlayers />
       <GameGrid />
